@@ -1,0 +1,8 @@
+#define OPEN_BRACE 1
+#define CLOSE_BRACE 2
+#define OPEN_CIRCULAR_BRACE 3
+#define CLOSE_CIRCULAR_BRACE 4
+#define COLON 5
+#define IDENTIFIER 6
+#define INTERGER 7
+
