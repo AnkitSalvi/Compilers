@@ -3,16 +3,12 @@
 #define IF 3
 #define ELSE 4
 #define THROW 5
-#define IMPLEMENTS 6
-#define ABSTRACT 7
 #define CONTINUE 8
 #define THIS 9
 #define SWITCH 10
 #define CASE 11
 #define DO 12
 #define ASSERT 13
-#define	PROTECTED 14
-#define	PRIVATE 15
 #define PUBLIC 16
 #define RETURN 17
 #define	EXTENDS 18
