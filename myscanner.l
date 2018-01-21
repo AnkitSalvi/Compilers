@@ -14,7 +14,7 @@
 "continue"		return CONTINUE;
 "this"			return THIS;
 "switch"		return SWITCH;
-"case"			return CASE;
+"icase"			return CASE;
 "do"			return DO;
 "assert"		return ASSERT;
 "public"		return PUBLIC;
@@ -44,14 +44,16 @@
 
 
 
-
-
-
-
+","			return COMMA;
+"."			return DOT;
+"["			return OPEN_SQUARE_BRACKET;
+"]"			return CLOSE_SQUARE_BRACKET;
 "{"			return OPEN_BRACE;
 "}"			return CLOSE_BRACE;
 "("			return OPEN_CIRCULAR_BRACE;
 ")"			return CLOSE_CIRCULAR_BRACE;
+ ;                      return SEMICOLON;
+
 "=" 			return ASSIGNMENT;
 "+="			
 "-="
@@ -89,10 +91,9 @@
 "~"
 
  
- ;			return COLON;
 
 [a-zA-Z][_a-zA-Z0-9]*	return IDENTIFIER;
-[0-9][0-9]*		return INTERGER;
+[0-9][0-9]*		return INTEGER;
 
 [ \t\n]			;
 . 			;
