@@ -57,40 +57,39 @@
 
 "=" 			return ASSIGNMENT;
 
-"+="			
-"-="
-"*="
-"/="
-"&="
-"|="
-"^="
-"<<="
-">>="
-">>>="
-"%="
-"?"
-":"
-"||"
-"&&"
-"|"
-"^"
-"&"
-"=="
-"!="
-"<"
-">"
-"<="
-">="
-"<<"
-">>"
-">>>"
-"+"
-"-"
-"*"
-"/"
-"%"
-"!"
-"~"
+"+="			return ADDSELF;
+"-="			return SUBSELF;
+"*="			return MULSELF;
+"/="			return DIVSELF;
+"&="			return ANDSELF;
+"|="			return ORSELF;
+"^="			return XORSELF;
+"<<="			return SLEFSELF;
+">>="			return SRIGSELF;
+">>>="			return UNSIGRIGSELF;
+"%="			return MODSELF;
+"?"				return QUESTION;
+":"				return COLON;
+"||"			return OR;
+"&&"			return AND;	
+"|"				return B_OR;
+"^"				return B_XOR;
+"&"				return B_AND;
+"=="			return EQUALS;
+"!="			return NOTEQUALS;
+"<"				return LESSTHAN;
+">"				return GREATERTHAN;
+"<="			return LESSOREQUAL;
+">="			return GREATEROREQUAL;
+"<<"			return SLEFT;
+">>" 			return SRIGHT;
+">>>"			return UNSIGRIG;
+"+"				return PLUS;
+"-"				return MINUS;
+"*"				return STAR;
+"/"				return DIVID;
+"%"				return MOD;
+"~"				return B_COMPL;
 
 
 

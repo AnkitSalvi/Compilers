@@ -47,25 +47,57 @@
 
 #define ASSIGNMENT 44
 #define NUMBER 45
-#define CHARACTER_LITERAL 46
-#define STRING_LITERAL 47
-#define LINE_COMMENT 48
-#define IDENTIFIER 49
-
-#define PLUS 487
 
 
-#define MINUS 123
-#define FORWARDSLASH 147
-#define STAR 481
-#define EQUALS 491
-#define NOTEQUAL 501
-#define AND 511
-#define OR 521
 
-#define INT_CONT 541
-#define FLOAT_CONST 515
-#define WHITESPACE 561
+#define PLUS 46
+#define MINUS 47
+#define DIVID 48
+#define STAR 71
+#define EQUALS 50
+#define NOTEQUALS 51 
+#define ADDSELF 52
+#define SUBSELF 53
+#define MULSELF 54
+#define DIVSELF 55
+#define ANDSELF 56
+#define ORSELF 57
+#define XORSELF 58
+#define SLEFSELF 59
+#define SRIGSELF 60
+#define UNSIGRIGSELF 61
+#define MODSELF 62
+#define QUESTION 63
+#define COLON 64
+#define AND 65
+#define OR 66
+#define B_OR 67
+#define	B_XOR 68
+#define	B_AND 69
+#define LESSTHAN 70
+#define GREATERTHAN 71 
+#define LESSOREQUAL 72
+#define GREATEROREQUAL 73
+#define SLEFT 74
+#define SRIGHT 75
+#define UNSIGRIG 76
+#define B_COMPL 77
+#define MOD 78
+
+
+
+#define CHARACTER_LITERAL 79
+#define STRING_LITERAL 80
+#define LINE_COMMENT 81
+#define IDENTIFIER 82
+
+
+
+
+
+#define INT_CONT 83
+#define FLOAT_CONST 84
+#define WHITESPACE 85
 
 
 

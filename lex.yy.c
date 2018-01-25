@@ -375,8 +375,8 @@ static void yy_fatal_error (yyconst char msg[]  );
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
 
-#define YY_NUM_RULES 86
-#define YY_END_OF_BUFFER 87
+#define YY_NUM_RULES 85
+#define YY_END_OF_BUFFER 86
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -386,29 +386,29 @@ struct yy_trans_info
 	};
 static yyconst flex_int16_t yy_accept[208] =
     {   0,
-        0,    0,   87,   85,   84,   84,   77,   85,   76,   62,
-       85,   41,   42,   74,   72,   35,   73,   36,   75,   79,
-       57,   43,   65,   44,   66,   56,   83,   37,   38,   61,
-       83,   83,   83,   83,   83,   83,   83,   83,   83,   83,
-       83,   83,   83,   83,   83,   39,   60,   40,   78,   64,
-        0,   81,    0,   55,   59,   49,    0,   80,    0,   47,
-       45,   46,   79,   82,   48,   79,   69,   67,   63,   68,
-       70,   83,   51,   83,   83,   83,   83,   83,   83,   83,
-       83,   10,   83,   83,   83,   83,   83,   83,   83,    3,
-       83,   83,   83,   83,   83,   83,   83,   83,   83,   83,
+        0,    0,   86,   84,   83,   83,   84,   84,   76,   62,
+       84,   41,   42,   74,   72,   35,   73,   36,   75,   78,
+       57,   43,   65,   44,   66,   56,   82,   37,   38,   61,
+       82,   82,   82,   82,   82,   82,   82,   82,   82,   82,
+       82,   82,   82,   82,   82,   39,   60,   40,   77,   64,
+        0,   80,    0,   55,   59,   49,    0,   79,    0,   47,
+       45,   46,   78,   81,   48,   78,   69,   67,   63,   68,
+       70,   82,   51,   82,   82,   82,   82,   82,   82,   82,
+       82,   10,   82,   82,   82,   82,   82,   82,   82,    3,
+       82,   82,   82,   82,   82,   82,   82,   82,   82,   82,
 
-       83,   83,   83,   83,   50,   58,   82,   82,   52,   53,
-       71,   83,   83,   83,   83,   83,   83,   83,   83,   83,
-       83,   83,   83,   83,   83,    1,   83,   83,   25,   83,
-       22,   83,   83,   83,   83,   83,   83,   83,   83,   21,
-       83,   83,   54,   83,   83,   83,   31,   83,   26,   83,
-       83,   83,   83,    4,   34,   83,   83,   83,   83,   83,
-       28,   83,   83,   83,   83,   83,   83,    7,   83,   17,
-       83,   83,   83,   24,   20,   19,   18,   83,   83,   83,
-       16,   27,    9,   83,   83,   83,   30,   83,   33,   83,
-        5,    2,   11,   83,   83,   29,   83,   23,   12,   13,
+       82,   82,   82,   82,   50,   58,   81,   81,   52,   53,
+       71,   82,   82,   82,   82,   82,   82,   82,   82,   82,
+       82,   82,   82,   82,   82,    1,   82,   82,   25,   82,
+       22,   82,   82,   82,   82,   82,   82,   82,   82,   21,
+       82,   82,   54,   82,   82,   82,   31,   82,   26,   82,
+       82,   82,   82,    4,   34,   82,   82,   82,   82,   82,
+       28,   82,   82,   82,   82,   82,   82,    7,   82,   17,
+       82,   82,   82,   24,   20,   19,   18,   82,   82,   82,
+       16,   27,    9,   82,   82,   82,   30,   82,   33,   82,
+        5,    2,   11,   82,   82,   29,   82,   23,   12,   13,
 
-       15,    8,   32,   83,   14,    6,    0
+       15,    8,   32,   82,   14,    6,    0
     } ;
 
 static yyconst YY_CHAR yy_ec[256] =
@@ -1102,215 +1102,210 @@ return ASSIGNMENT;
 case 45:
 YY_RULE_SETUP
 #line 60 "myscanner.l"
-
+return ADDSELF;
 	YY_BREAK
 case 46:
 YY_RULE_SETUP
 #line 61 "myscanner.l"
-
+return SUBSELF;
 	YY_BREAK
 case 47:
 YY_RULE_SETUP
 #line 62 "myscanner.l"
-
+return MULSELF;
 	YY_BREAK
 case 48:
 YY_RULE_SETUP
 #line 63 "myscanner.l"
-
+return DIVSELF;
 	YY_BREAK
 case 49:
 YY_RULE_SETUP
 #line 64 "myscanner.l"
-
+return ANDSELF;
 	YY_BREAK
 case 50:
 YY_RULE_SETUP
 #line 65 "myscanner.l"
-
+return ORSELF;
 	YY_BREAK
 case 51:
 YY_RULE_SETUP
 #line 66 "myscanner.l"
-
+return XORSELF;
 	YY_BREAK
 case 52:
 YY_RULE_SETUP
 #line 67 "myscanner.l"
-
+return SLEFSELF;
 	YY_BREAK
 case 53:
 YY_RULE_SETUP
 #line 68 "myscanner.l"
-
+return SRIGSELF;
 	YY_BREAK
 case 54:
 YY_RULE_SETUP
 #line 69 "myscanner.l"
-
+return UNSIGRIGSELF;
 	YY_BREAK
 case 55:
 YY_RULE_SETUP
 #line 70 "myscanner.l"
-
+return MODSELF;
 	YY_BREAK
 case 56:
 YY_RULE_SETUP
 #line 71 "myscanner.l"
-
+return QUESTION;
 	YY_BREAK
 case 57:
 YY_RULE_SETUP
 #line 72 "myscanner.l"
-
+return COLON;
 	YY_BREAK
 case 58:
 YY_RULE_SETUP
 #line 73 "myscanner.l"
-
+return OR;
 	YY_BREAK
 case 59:
 YY_RULE_SETUP
 #line 74 "myscanner.l"
-
+return AND;	
 	YY_BREAK
 case 60:
 YY_RULE_SETUP
 #line 75 "myscanner.l"
-
+return B_OR;
 	YY_BREAK
 case 61:
 YY_RULE_SETUP
 #line 76 "myscanner.l"
-
+return B_XOR;
 	YY_BREAK
 case 62:
 YY_RULE_SETUP
 #line 77 "myscanner.l"
-
+return B_AND;
 	YY_BREAK
 case 63:
 YY_RULE_SETUP
 #line 78 "myscanner.l"
-
+return EQUALS;
 	YY_BREAK
 case 64:
 YY_RULE_SETUP
 #line 79 "myscanner.l"
-
+return NOTEQUALS;
 	YY_BREAK
 case 65:
 YY_RULE_SETUP
 #line 80 "myscanner.l"
-
+return LESSTHAN;
 	YY_BREAK
 case 66:
 YY_RULE_SETUP
 #line 81 "myscanner.l"
-
+return GREATERTHAN;
 	YY_BREAK
 case 67:
 YY_RULE_SETUP
 #line 82 "myscanner.l"
-
+return LESSOREQUAL;
 	YY_BREAK
 case 68:
 YY_RULE_SETUP
 #line 83 "myscanner.l"
-
+return GREATEROREQUAL;
 	YY_BREAK
 case 69:
 YY_RULE_SETUP
 #line 84 "myscanner.l"
-
+return SLEFT;
 	YY_BREAK
 case 70:
 YY_RULE_SETUP
 #line 85 "myscanner.l"
-
+return SRIGHT;
 	YY_BREAK
 case 71:
 YY_RULE_SETUP
 #line 86 "myscanner.l"
-
+return UNSIGRIG;
 	YY_BREAK
 case 72:
 YY_RULE_SETUP
 #line 87 "myscanner.l"
-
+return PLUS;
 	YY_BREAK
 case 73:
 YY_RULE_SETUP
 #line 88 "myscanner.l"
-
+return MINUS;
 	YY_BREAK
 case 74:
 YY_RULE_SETUP
 #line 89 "myscanner.l"
-
+return STAR;
 	YY_BREAK
 case 75:
 YY_RULE_SETUP
 #line 90 "myscanner.l"
-
+return DIVID;
 	YY_BREAK
 case 76:
 YY_RULE_SETUP
 #line 91 "myscanner.l"
-
+return MOD;
 	YY_BREAK
 case 77:
 YY_RULE_SETUP
 #line 92 "myscanner.l"
-
+return B_COMPL;
 	YY_BREAK
 case 78:
 YY_RULE_SETUP
-#line 93 "myscanner.l"
-
+#line 96 "myscanner.l"
+return NUMBER;
 	YY_BREAK
 case 79:
 YY_RULE_SETUP
-#line 97 "myscanner.l"
-return NUMBER;
+#line 98 "myscanner.l"
+return CHARACTER_LITERAL;
 	YY_BREAK
 case 80:
 YY_RULE_SETUP
-#line 99 "myscanner.l"
-return CHARACTER_LITERAL;
+#line 100 "myscanner.l"
+return STRING_LITERAL;
 	YY_BREAK
 case 81:
 YY_RULE_SETUP
-#line 101 "myscanner.l"
-return STRING_LITERAL;
+#line 102 "myscanner.l"
+return LINE_COMMENT;
 	YY_BREAK
 case 82:
 YY_RULE_SETUP
-#line 103 "myscanner.l"
-return LINE_COMMENT;
-	YY_BREAK
-case 83:
-YY_RULE_SETUP
-#line 105 "myscanner.l"
+#line 104 "myscanner.l"
 return IDENTIFIER;
 	YY_BREAK
+case 83:
+/* rule 83 can match eol */
+YY_RULE_SETUP
+#line 106 "myscanner.l"
+;
+	YY_BREAK
 case 84:
-/* rule 84 can match eol */
 YY_RULE_SETUP
 #line 107 "myscanner.l"
-;
+printf("Illegal Character\n");
 	YY_BREAK
 case 85:
 YY_RULE_SETUP
-#line 108 "myscanner.l"
-printf("Illegal Character\n");
-	YY_BREAK
-case 86:
-YY_RULE_SETUP
-#line 110 "myscanner.l"
+#line 109 "myscanner.l"
 ECHO;
 	YY_BREAK
-#line 1314 "lex.yy.c"
+#line 1309 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -2311,7 +2306,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 110 "myscanner.l"
+#line 109 "myscanner.l"
 
 
 
