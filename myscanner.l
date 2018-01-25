@@ -1,6 +1,6 @@
 %{
 	#include "myscanner.h"
-	#include <regex>
+	
 %}
 
 
@@ -56,7 +56,6 @@
  ;                      return SEMICOLON;
 
 "=" 			return ASSIGNMENT;
-"\+"                      return PLUS;
 
 "+="			
 "-="
@@ -85,6 +84,7 @@
 "<<"
 ">>"
 ">>>"
+"+"
 "-"
 "*"
 "/"

@@ -49,7 +49,7 @@
 #define INTEGER 45
 #define IDENTIFIER 46
 
-#define PLUS 47
+#define PLUS 487
 
 
 #define MINUS 123
