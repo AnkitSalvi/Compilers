@@ -13,8 +13,8 @@ int main()
 	int ntoken;
 	ntoken=yylex();
 
-	const char *arr[]={NULL, "FOR", "WHILE", "IF", "ELSE", "THROW", "CONTINUE", "THIS", "SWITCH", "CASE", "DO", "ASSERT", "PUBLIC", "RETURN", "EXTENDS", "STATIC", "FINAL", "VOID", "CONST", "CLASS", "CATCH", "TRY", "NEW", "IMPORT", "BREAK", "INT", "CHAR", "FLOAT","LONG","DOUBLE","SHORT", "BYTE", "BOOLEAN", "SUPER", "ENUM", "OPEN_BRACE", "CLOSE_BRACE", "OPEN_CIRCULAR_BASE", "CLOSE_CIRCULAR_BASE", "OPEN_SQUARE_BRACKET", "CLOSE_SQUARE_BRACKET", "COMMA", "SEMICOLON", "DOT", "ASSIGNMENT", "INTEGER", "IDENTIFIER"};
-	int count[47];
+	const char *arr[]={NULL, "FOR", "WHILE", "IF", "ELSE", "THROW", "CONTINUE", "THIS", "SWITCH", "CASE", "DO", "ASSERT", "PUBLIC", "RETURN", "EXTENDS", "STATIC", "FINAL", "VOID", "CONST", "CLASS", "CATCH", "TRY", "NEW", "IMPORT", "BREAK", "INT", "CHAR", "FLOAT","LONG","DOUBLE","SHORT", "BYTE", "BOOLEAN", "SUPER", "ENUM", "OPEN_BRACE", "CLOSE_BRACE", "OPEN_CIRCULAR_BASE", "CLOSE_CIRCULAR_BASE", "OPEN_SQUARE_BRACKET", "CLOSE_SQUARE_BRACKET", "COMMA", "SEMICOLON", "DOT", "ASSIGNMENT", "NUMBER","CHARACTER_LITERAL", "STRING_LITERAL","LINE_COMMENT", "IDENTIFIER"};
+	int count[49];
 	std::memset(count,0,sizeof(count));
 	while(ntoken)
 	{	
@@ -22,8 +22,8 @@ int main()
 	//printf("%s|%d\n",arr[ntoken],ntoken);
 	ntoken=yylex();
 	}
-	int i=1;
-	while(i<47)
+	int i=45;
+	while(i<49)
 	{
 	printf("%s|%d\n",arr[i],count[i]);
 	i++;	

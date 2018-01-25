@@ -92,13 +92,20 @@
 "!"
 "~"
 
- 
+
+
+\.?[0-9][0-9eE_lLdDa-fA-F.xXpP]*	return NUMBER;
+
+\'([^\\\n]|(\\.))*?\' 		return CHARACTER_LITERAL;
+
+\"([^\\\n]|(\\.))*?\"		return STRING_LITERAL;
+
+[/]{2,}.* 			return LINE_COMMENT;
 
 [a-zA-Z][_a-zA-Z0-9]*	return IDENTIFIER;
-[0-9][0-9]*		return INTEGER;
 
 [ \t\n]			;
-. 			;
+. 			printf("Illegal Character\n");
 
 %%
 

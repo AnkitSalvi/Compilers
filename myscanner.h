@@ -46,8 +46,11 @@
 #define DOT 43
 
 #define ASSIGNMENT 44
-#define INTEGER 45
-#define IDENTIFIER 46
+#define NUMBER 45
+#define CHARACTER_LITERAL 46
+#define STRING_LITERAL 47
+#define LINE_COMMENT 48
+#define IDENTIFIER 49
 
 #define PLUS 487
 
