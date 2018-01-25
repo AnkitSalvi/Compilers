@@ -47,8 +47,11 @@
 
 #define ASSIGNMENT 44
 #define INTEGER 45
+#define IDENTIFIER 46
 
-#define PLUS 123
+#define PLUS 47
+
+
 #define MINUS 123
 #define FORWARDSLASH 147
 #define STAR 481
@@ -57,7 +60,6 @@
 #define AND 511
 #define OR 521
 
-#define IDENTIFIER 46
 #define INT_CONT 541
 #define FLOAT_CONST 515
 #define WHITESPACE 561
