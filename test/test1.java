@@ -1,9 +1,8 @@
 
 public class HelloWorld {
 	public static void main( String[] args ) {
-		"auhsbji"
-	"c"	"5" 
-		6y_i
+		'a'
+	system.out.println('H',  + name + '!'); 
 
 	int a = 4 ;
 	}

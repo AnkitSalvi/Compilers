@@ -101,13 +101,13 @@
 
 \.?[0-9][0-9]*      	return NUMBER;     
 
-\'([^\\\n]|(\\.))*?\' 	      	return CHARACTER_LITERAL;     
+\'([^\\\n\']|(\\.))*\' 	      	return CHARACTER_LITERAL;     
 
-\"([^\\\n]|(\\.))*?\"	      	return STRING_LITERAL;     
+\"([^\\\n\"]|(\\.))*\"     return STRING_LITERAL;     
 
 [/]{2,}.* 		     	return LINE_COMMENT;     
 
-[a-zA-Z][_a-zA-Z0-9]*     	return IDENTIFIER;     
+[a-zA-Z_$][_a-zA-Z0-9_$]*     	return IDENTIFIER;     
 
 [ \t\n]			;
 . 			printf("Illegal Character\n");
