@@ -4,6 +4,7 @@
 #include <iostream>
 #include <sstream>
 #include<vector>
+#include<iomanip>
 using namespace std;
 
 extern int yylex();
@@ -40,37 +41,34 @@ int main()
 	count[ntoken]++;		
 	//printf("%s|%d\n",arr[ntoken],ntoken);
 		ntoken=yylex();
-		if(ntoken == (45||79||80||81||82||83||84)){
+		//cout << ntoken << yytext <<endl;
+		if(ntoken == 45||ntoken ==79||ntoken ==80||ntoken ==81||ntoken ==82||ntoken ==83||ntoken ==84){
 			matrix[ntoken].push_back(yytext);
-			cout << arr[ntoken] <<endl;
+			//cout << "inside if " << ntoken<< endl;
+			//cout << arr[ntoken] <<endl;
 		}
 		else{
 			if(flag[ntoken]==0){
 				flag[ntoken]=1;
 				//cout << "lol" <<endl;
-				
+				//cout << "inside if " << endl;
 				matrix[ntoken].push_back(yytext);
 				//cout << "lol2"<<endl;
 			}
 		}
 	}
 	int i=1;
-	while(i<85)
-	{
-	//	printf("%s|%d\n",arr[i],count[i]);
-		i++;
-	}
 
-	cout << "\n";
-	cout << "\n";
+	cout << left << setw(30) << "TOKENS" << left << setw(30) << "OCCURANCES" << "LEXEMES" << "\n\n";
 
 	for (int i = 0; i < matrix.size(); i++)
 	{
-		for (int j = 0; j < matrix[i].size(); j++)
+		cout << left << setw(30) << arr[i] 	<< left << setw(30) << count[i] ;
+		for (int j = 1; j < matrix[i].size(); j++)
 		{
-			cout << matrix[i][j] << "\t" ; 
+			cout << matrix[i][j] <<"\t" ; 
 		}
-		printf("\n");
+		cout << endl;
 	}
 	
 	 
