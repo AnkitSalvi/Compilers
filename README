@@ -1,3 +1,23 @@
 JAVA Lexer
 
 We implemented a lexer which outputs lexemes.
+
+The tuple for which we implement the lexer is
+SOURCE LANGUAGE: JAVA
+IMPLEMENTATION LANGUAGE: C++
+TARGET LANGUAGE: x86
+
+We wrote a scanner.y file which when compiled by using bison generated scanner.tab.c and scanner.tab.h.
+
+The scanner.tab.h file is used in the scanner.cpp file after compiling scanner.l using Flex .Using scanner.cpp file we generated tokens.
+
+Procedure to run the lexer:
+Follow the below set of commands.
+
+– cd asgn1
+– make
+– bin/lexer test/test1.c
+ 
+
+
+

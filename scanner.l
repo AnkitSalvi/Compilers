@@ -99,7 +99,7 @@
 
 
 
-\.?[0-9][0-9eE_lLdDa-fA-F.xXpP]*      	return NUMBER;     
+\.?[0-9][0-9]*      	return NUMBER;     
 
 \'([^\\\n]|(\\.))*?\' 	      	return CHARACTER_LITERAL;     
 
@@ -118,5 +118,4 @@ int yywrap(void)
 {
 	return 1;
 }
-
 
