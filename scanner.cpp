@@ -10,9 +10,9 @@ using namespace std;
 extern int yylex();
 extern char* yytext;
 extern int yylineno;
-
-int main()
-{
+extern FILE *yyin; 
+int main(int argc, char *argv[])
+{	yyin = fopen(argv[1], "r");
 	int ntoken;
 	ntoken=yylex();
 
@@ -71,7 +71,7 @@ int main()
 		cout << endl;
 	}
 	
-	 
+	 fclose(yyin);
 
 
 
