@@ -135,7 +135,7 @@ extern int yydebug;
 
 union YYSTYPE
 {
-#line 7 "./src/scanner.y" /* yacc.c:1909  */
+#line 7 "scanner.y" /* yacc.c:1909  */
 
 	char* str;	
 

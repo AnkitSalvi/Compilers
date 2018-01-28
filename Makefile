@@ -1,6 +1,6 @@
 all:
-	bison -d scanner.y
-	flex scanner.l
-	cd bin && g++ ./../scanner.cpp ./../lex.yy.c -o lexer
+	bison -d ./src/scanner.y
+	flex ./src/scanner.l
+	cd ./bin && g++ ./../src/scanner.cpp ./../src/lex.yy.c -o lexer
 	
 	

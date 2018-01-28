@@ -62,7 +62,7 @@
 
 
 /* Copy the first part of user declarations.  */
-#line 1 "./src/scanner.y" /* yacc.c:339  */
+#line 1 "scanner.y" /* yacc.c:339  */
 
 	#define yyerror atoi
 	extern "C" int yylex();
@@ -192,7 +192,7 @@ extern int yydebug;
 
 union YYSTYPE
 {
-#line 7 "./src/scanner.y" /* yacc.c:355  */
+#line 7 "scanner.y" /* yacc.c:355  */
 
 	char* str;	
 
@@ -1524,6 +1524,6 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 114 "./src/scanner.y" /* yacc.c:1906  */
+#line 114 "scanner.y" /* yacc.c:1906  */
 
 
