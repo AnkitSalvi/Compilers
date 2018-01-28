@@ -58,7 +58,7 @@ extern int yydebug;
     ASSERT = 11,
     PUBLIC = 12,
     RETURN = 13,
-    EXTENDS = 14,
+    MOD = 14,
     STATIC = 15,
     FINAL = 16,
     VOID = 17,
@@ -105,31 +105,28 @@ extern int yydebug;
     XORSELF = 58,
     SLEFSELF = 59,
     SRIGSELF = 60,
-    UNSIGRIGSELF = 61,
-    MODSELF = 62,
-    QUESTION = 63,
-    COLON = 64,
-    AND = 65,
-    OR = 66,
-    B_OR = 67,
-    B_XOR = 68,
-    B_AND = 69,
-    LESSTHAN = 70,
-    GREATERTHAN = 71,
-    LESSOREQUAL = 72,
-    GREATEROREQUAL = 73,
-    SLEFT = 74,
-    SRIGHT = 75,
-    UNSIGRIG = 76,
-    B_COMPL = 77,
-    MOD = 78,
-    CHARACTER_LITERAL = 79,
-    STRING_LITERAL = 80,
-    LINE_COMMENT = 81,
-    IDENTIFIER = 82,
-    INT_CONT = 83,
-    FLOAT_CONST = 84,
-    WHITESPACE = 85
+    MODSELF = 61,
+    QUESTION = 62,
+    COLON = 63,
+    AND = 64,
+    OR = 65,
+    B_OR = 66,
+    B_XOR = 67,
+    B_AND = 68,
+    LESSTHAN = 69,
+    GREATERTHAN = 70,
+    LESSOREQUAL = 71,
+    GREATEROREQUAL = 72,
+    SLEFT = 73,
+    SRIGHT = 74,
+    B_COMPL = 75,
+    CHARACTER_LITERAL = 76,
+    STRING_LITERAL = 77,
+    LINE_COMMENT = 78,
+    IDENTIFIER = 79,
+    WHITESPACE = 80,
+    NOT = 81,
+    ILLEGAL = 82
   };
 #endif
 
@@ -142,7 +139,7 @@ union YYSTYPE
 
 	char* str;	
 
-#line 146 "scanner.tab.h" /* yacc.c:1909  */
+#line 143 "scanner.tab.h" /* yacc.c:1909  */
 };
 
 typedef union YYSTYPE YYSTYPE;

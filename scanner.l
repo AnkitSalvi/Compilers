@@ -26,8 +26,8 @@
 "do"            	return DO;     
 "assert"        	return ASSERT;    
 "public"        	return PUBLIC;     
-"return"        	return RETURN;     
-"extends"       	return EXTENDS;     
+"return"        	return RETURN; 
+"%"	      		return MOD;        
 "static"		return STATIC;     
 "final"			return FINAL;     
 "void" 	      		return VOID;     
@@ -64,39 +64,37 @@
 "=" 			return ASSIGNMENT;     
 	
 "+="			return ADDSELF;     
-"-="	     	 	return SUBSELF;     
-"*="	      		return MULSELF;     
-"/="	      		return DIVSELF;     
-"&="	      		return ANDSELF;     
-"|="	      		return ORSELF;     
-"^="	      		return XORSELF;     
-"<<="	      		return SLEFSELF;     
-">>="	      		return SRIGSELF;     
-">>>="	     		return UNSIGRIGSELF;     
-"%="	      		return MODSELF;     
+"-="	     	return SUBSELF;     
+"*="	      	return MULSELF;     
+"/="	      	return DIVSELF;     
+"&="	      	return ANDSELF;     
+"|="	      	return ORSELF;     
+"^="	      	return XORSELF;     
+"<<="	      	return SLEFSELF;     
+">>="	      	return SRIGSELF;        
+"%="	      	return MODSELF;     
 "?"	      		return QUESTION;     
 ":"	     		return COLON;     
-"||"	      		return OR;     
-"&&"	      		return AND;	     
+"||"	      	return OR;     
+"&&"	      	return AND;	     
 "|"	      		return B_OR;     
 "^"	      		return B_XOR;     
 "&"	      		return B_AND;     
-"=="	      		return EQUALS;     
-"!="	      		return NOTEQUALS;     
+"=="	      	return EQUALS;     
+"!="	      	return NOTEQUALS;     
 "<"	     		return LESSTHAN;     
 ">"	      		return GREATERTHAN;     
-"<="	      		return LESSOREQUAL;     
-">="	      		return GREATEROREQUAL;     
-"<<"	      		return SLEFT;     
-">>" 	      		return SRIGHT;     
-">>>"	      		return UNSIGRIG;     
+"<="	      	return LESSOREQUAL;     
+">="	      	return GREATEROREQUAL;     
+"<<"	      	return SLEFT;     
+">>" 	      	return SRIGHT;          
 "+"	      		return PLUS;     
 "-"	      		return MINUS;     
 "*"	      		return STAR;     
 "/"	     		return DIVID;     
-"%"	      		return MOD;     
+     
 "~"	      		return B_COMPL;     
-
+"!"				return NOT;
 
 
 ([0-9]*)?(\.)?[0-9][0-9]*      	return NUMBER;     
@@ -111,8 +109,9 @@
 
 [a-zA-Z_$][_a-zA-Z0-9_$]*     	return IDENTIFIER;     
 
-[ \t\n]			;
-. 			printf("Illegal Character\n");
+[ \t\n]			return WHITESPACE;
+
+. 			return ILLEGAL;
 
 %%
 

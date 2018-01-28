@@ -115,7 +115,7 @@ extern int yydebug;
     ASSERT = 11,
     PUBLIC = 12,
     RETURN = 13,
-    EXTENDS = 14,
+    MOD = 14,
     STATIC = 15,
     FINAL = 16,
     VOID = 17,
@@ -162,31 +162,28 @@ extern int yydebug;
     XORSELF = 58,
     SLEFSELF = 59,
     SRIGSELF = 60,
-    UNSIGRIGSELF = 61,
-    MODSELF = 62,
-    QUESTION = 63,
-    COLON = 64,
-    AND = 65,
-    OR = 66,
-    B_OR = 67,
-    B_XOR = 68,
-    B_AND = 69,
-    LESSTHAN = 70,
-    GREATERTHAN = 71,
-    LESSOREQUAL = 72,
-    GREATEROREQUAL = 73,
-    SLEFT = 74,
-    SRIGHT = 75,
-    UNSIGRIG = 76,
-    B_COMPL = 77,
-    MOD = 78,
-    CHARACTER_LITERAL = 79,
-    STRING_LITERAL = 80,
-    LINE_COMMENT = 81,
-    IDENTIFIER = 82,
-    INT_CONT = 83,
-    FLOAT_CONST = 84,
-    WHITESPACE = 85
+    MODSELF = 61,
+    QUESTION = 62,
+    COLON = 63,
+    AND = 64,
+    OR = 65,
+    B_OR = 66,
+    B_XOR = 67,
+    B_AND = 68,
+    LESSTHAN = 69,
+    GREATERTHAN = 70,
+    LESSOREQUAL = 71,
+    GREATEROREQUAL = 72,
+    SLEFT = 73,
+    SRIGHT = 74,
+    B_COMPL = 75,
+    CHARACTER_LITERAL = 76,
+    STRING_LITERAL = 77,
+    LINE_COMMENT = 78,
+    IDENTIFIER = 79,
+    WHITESPACE = 80,
+    NOT = 81,
+    ILLEGAL = 82
   };
 #endif
 
@@ -199,7 +196,7 @@ union YYSTYPE
 
 	char* str;	
 
-#line 203 "scanner.tab.c" /* yacc.c:355  */
+#line 200 "scanner.tab.c" /* yacc.c:355  */
 };
 
 typedef union YYSTYPE YYSTYPE;
@@ -216,7 +213,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 220 "scanner.tab.c" /* yacc.c:358  */
+#line 217 "scanner.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -461,7 +458,7 @@ union yyalloc
 #define YYLAST   0
 
 /* YYNTOKENS -- Number of terminals.  */
-#define YYNTOKENS  88
+#define YYNTOKENS  85
 /* YYNNTS -- Number of nonterminals.  */
 #define YYNNTS  2
 /* YYNRULES -- Number of rules.  */
@@ -489,7 +486,7 @@ static const yytype_uint8 yytranslate[] =
       52,    53,    54,    55,    56,    57,    58,    59,    60,    61,
       62,    63,    64,    65,    66,    67,    68,    69,    70,    71,
       72,    73,    74,    75,    76,    77,    78,    79,    80,    81,
-      82,    83,    84,    85,    86,    87,     2,     2,     2,     2,
+      82,    83,    84,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
@@ -513,7 +510,7 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,   115,   115
+       0,   112,   112
 };
 #endif
 
@@ -524,19 +521,18 @@ static const char *const yytname[] =
 {
   "$end", "error", "$undefined", "FOR", "WHILE", "IF", "ELSE", "THROW",
   "CONTINUE", "THIS", "SWITCH", "CASE", "DO", "ASSERT", "PUBLIC", "RETURN",
-  "EXTENDS", "STATIC", "FINAL", "VOID", "CONST", "CLASS", "CATCH", "TRY",
+  "MOD", "STATIC", "FINAL", "VOID", "CONST", "CLASS", "CATCH", "TRY",
   "NEW", "IMPORT", "BREAK", "INT", "CHAR", "FLOAT", "LONG", "DOUBLE",
   "SHORT", "BYTE", "BOOLEAN", "SUPER", "ENUM", "OPEN_BRACE", "CLOSE_BRACE",
   "OPEN_CIRCULAR_BRACE", "CLOSE_CIRCULAR_BRACE", "OPEN_SQUARE_BRACKET",
   "CLOSE_SQUARE_BRACKET", "COMMA", "SEMICOLON", "DOT", "ASSIGNMENT",
   "NUMBER", "PLUS", "MINUS", "DIVID", "STAR", "EQUALS", "NOTEQUALS",
   "ADDSELF", "SUBSELF", "MULSELF", "DIVSELF", "ANDSELF", "ORSELF",
-  "XORSELF", "SLEFSELF", "SRIGSELF", "UNSIGRIGSELF", "MODSELF", "QUESTION",
-  "COLON", "AND", "OR", "B_OR", "B_XOR", "B_AND", "LESSTHAN",
-  "GREATERTHAN", "LESSOREQUAL", "GREATEROREQUAL", "SLEFT", "SRIGHT",
-  "UNSIGRIG", "B_COMPL", "MOD", "CHARACTER_LITERAL", "STRING_LITERAL",
-  "LINE_COMMENT", "IDENTIFIER", "INT_CONT", "FLOAT_CONST", "WHITESPACE",
-  "$accept", "expr", YY_NULLPTR
+  "XORSELF", "SLEFSELF", "SRIGSELF", "MODSELF", "QUESTION", "COLON", "AND",
+  "OR", "B_OR", "B_XOR", "B_AND", "LESSTHAN", "GREATERTHAN", "LESSOREQUAL",
+  "GREATEROREQUAL", "SLEFT", "SRIGHT", "B_COMPL", "CHARACTER_LITERAL",
+  "STRING_LITERAL", "LINE_COMMENT", "IDENTIFIER", "WHITESPACE", "NOT",
+  "ILLEGAL", "$accept", "expr", YY_NULLPTR
 };
 #endif
 
@@ -553,7 +549,7 @@ static const yytype_uint16 yytoknum[] =
       48,    49,    50,    51,    52,    53,    54,    55,    56,    57,
       58,    59,    60,    61,    62,    63,    64,    65,    66,    67,
       68,    69,    70,    71,    72,    73,    74,    75,    76,    77,
-      78,    79,    80,    81,    82,    83,    84,    85
+      78,    79,    80,    81,    82
 };
 # endif
 
@@ -611,13 +607,13 @@ static const yytype_uint8 yycheck[] =
      symbol of state STATE-NUM.  */
 static const yytype_uint8 yystos[] =
 {
-       0,    89,     0
+       0,    86,     0
 };
 
   /* YYR1[YYN] -- Symbol number of symbol that rule YYN derives.  */
 static const yytype_uint8 yyr1[] =
 {
-       0,    88,    89
+       0,    85,    86
 };
 
   /* YYR2[YYN] -- Number of symbols on the right hand side of rule YYN.  */
@@ -1300,7 +1296,7 @@ yyreduce:
   switch (yyn)
     {
       
-#line 1304 "scanner.tab.c" /* yacc.c:1646  */
+#line 1300 "scanner.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1528,6 +1524,6 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 117 "scanner.y" /* yacc.c:1906  */
+#line 114 "scanner.y" /* yacc.c:1906  */
 
 

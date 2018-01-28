@@ -22,17 +22,17 @@
 %token <str> ASSERT 11
 %token <str> PUBLIC 12
 %token <str> RETURN 13
-%token <str>	EXTENDS 14
+%token <str> MOD 14
 %token <str> STATIC 15
 %token <str> FINAL 16
-%token <str>	VOID 17
+%token <str> VOID 17
 %token <str> CONST 18
-%token <str>	CLASS 19
+%token <str> CLASS 19
 %token <str> CATCH 20
-%token <str>	TRY 21
+%token <str> TRY 21
 %token <str> NEW 22
-%token <str>IMPORT 23
-%token <str>	BREAK 24
+%token <str> IMPORT 23
+%token <str> BREAK 24
 %token <str> INT  25
 %token <str> CHAR 26
 %token <str> FLOAT 27
@@ -76,39 +76,36 @@
 %token <str> XORSELF 58
 %token <str> SLEFSELF 59
 %token <str> SRIGSELF 60
-%token <str> UNSIGRIGSELF 61
-%token <str> MODSELF 62
-%token <str> QUESTION 63
-%token <str> COLON 64
-%token <str> AND 65
-%token <str> OR 66
-%token <str> B_OR 67
-%token <str>	B_XOR 68
-%token <str>	B_AND 69
-%token <str> LESSTHAN 70
-%token <str> GREATERTHAN 71 
-%token <str> LESSOREQUAL 72
-%token <str> GREATEROREQUAL 73
-%token <str> SLEFT 74
-%token <str> SRIGHT 75
-%token <str> UNSIGRIG 76
-%token <str> B_COMPL 77
-%token <str> MOD 78
-
-
-
-%token <str> CHARACTER_LITERAL 79
-%token <str> STRING_LITERAL 80
-%token <str> LINE_COMMENT 81
-%token <str> IDENTIFIER 82
+%token <str> MODSELF 61
+%token <str> QUESTION 62
+%token <str> COLON 63
+%token <str> AND 64
+%token <str> OR 65
+%token <str> B_OR 66
+%token <str> B_XOR 67
+%token <str> B_AND 68
+%token <str> LESSTHAN 69
+%token <str> GREATERTHAN 70
+%token <str> LESSOREQUAL 71
+%token <str> GREATEROREQUAL 72
+%token <str> SLEFT 73
+%token <str> SRIGHT 74
+%token <str> B_COMPL 75
 
 
 
 
+%token <str> CHARACTER_LITERAL 76
+%token <str> STRING_LITERAL 77
+%token <str> LINE_COMMENT 78
+%token <str> IDENTIFIER 79
 
-%token <str> INT_CONT 83
-%token <str> FLOAT_CONST 84
-%token <str> WHITESPACE 85
+
+
+
+%token <str> WHITESPACE 80
+%token <str> NOT 81
+%token <str> ILLEGAL 82
 
 
 %%
