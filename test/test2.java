@@ -4,7 +4,7 @@ public class A {
 
     public static void main(String[] args) {
 
-        double[] values = { 0.1, 5.2, 5.3, 6.3, 83.3 };
+        double[] values = { 0.1, .2, 5.3, 6.3, 83.3 };
 
         for(int i=0; i < values.length; i=i+1) {
             System.out.printf("%.2f ", values[i]);
@@ -21,7 +21,7 @@ public class A {
         	}
         }
 
-        System.out.println("I '\"\"am");
+        System.out.println("I '\"\"am" + 19 + "years old\"");
 
         float a = 33.3;
         float b = 43.6;

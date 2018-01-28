@@ -53,7 +53,7 @@
 
 
 ","	      		return COMMA;     
-"."	      		return DOT;     
+     
 "["	    		return OPEN_SQUARE_BRACKET;     
 "]"	      		return CLOSE_SQUARE_BRACKET;     
 "{"	      		return OPEN_BRACE;     
@@ -99,9 +99,11 @@
 
 
 
-\.?[0-9][0-9]*      	return NUMBER;     
+([0-9]*)?(\.)?[0-9][0-9]*      	return NUMBER;     
 
-\'([^\\\n\']|(\\.))*\' 	      	return CHARACTER_LITERAL;     
+"."                     return DOT;
+
+\'((\\)|[^\\\n\']|(\\.))\' 	      	return CHARACTER_LITERAL;     
 
 \"([^\\\n\"]|(\\.))*\"     return STRING_LITERAL;     
 

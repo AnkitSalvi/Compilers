@@ -7,6 +7,10 @@ public class A {
 // we defined 10 integer variables "364839 'f893!!78''\*~"
     	char u = 'ux';
     	char v ='v';
+	
+// The below line is for testing char literals
+	char x ='\'';
+	char y = '\';
 
     	long int t = 1000000;
 
