@@ -1,4 +1,4 @@
-class ThrowExcep
+class test4
 {
     static void fun()
     {

@@ -107,7 +107,7 @@
 
 [/]{2,}.* 		     	return LINE_COMMENT;     
 
-[a-zA-Z_$][_a-zA-Z0-9_$]*     	return IDENTIFIER;     
+[a-zA-Z_][_a-zA-Z0-9_]*     	return IDENTIFIER;     
 
 [ \t\n]			return WHITESPACE;
 
